@@ -1,0 +1,219 @@
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Main Title styling */
+.main-title {
+  text-align: start;
+  font-size: 50px; /* Reduced the font size */
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px; /* Reduced bottom margin */
+  max-width: 80%;
+}
+@media (max-width: 768px) {
+  .h-100vh-sm {
+    height: 100vh;
+  }
+  .navbar-light .nav-link {
+    line-height: 40px; /* Line height */
+  }
+}
+@media (max-width: 992px) {
+  #header {
+    background-color: #fff !important;
+  }
+  .main-title {
+    font-size: 30px; /* Reduced the font size */
+    letter-spacing: 0.1em;
+  }
+  .main-title {
+    max-width: 100%;
+  }
+  .product-image {
+    transform: translateY(0) !important;
+  }
+  .gap-1 {
+    gap: 15px;
+  }
+  .my-lg-15 {
+    padding: 1vh 0 !important;
+  }
+}
+/* Row and Column Layout */
+.content {
+  margin: 20px 0; /* Reduced margin around content sections */
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px; /* Reduced the space between rows */
+  min-height: 225px; /* Reduced minimum height for the row */
+}
+
+.col {
+  flex: 1;
+  padding: 10px; /* Reduced padding */
+}
+
+/* Image Column */
+.image-col {
+  flex: 0.4; /* Reduced the size of image column */
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Ensure image is vertically centered */
+}
+
+/* Image Size Adjustment */
+.product-image {
+  margin: 0 25px;
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  max-height: 322px; /* Set maximum height for images to reduce their size */
+  object-fit: contain; /* Keep aspect ratio while scaling down */
+  transform: translateY(-46px);
+}
+.icon-image {
+  margin: 0 25px;
+  height: 120px;
+  max-width: 100%; /* Ensure images don't exceed the container width */
+  max-height: 260px; /* Set maximum height for images to reduce their size */
+  object-fit: contain; /* Keep aspect ratio while scaling down */
+}
+.product-image2 {
+  margin: 0 25px;
+  left: -33px;
+  bottom: -102px;
+  max-height: 322px;
+  object-fit: contain;
+  transform: translateY(-46px);
+}
+/* Heading styles */
+.heading {
+  font-size: 30px; /* Reduced font size */
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+  margin-bottom: 10px; /* Reduced spacing under heading */
+}
+
+.subheading {
+  text-align: left;
+  font-size: 24px; /* Reduced font size */
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px; /* Reduced margin under subheading */
+}
+
+/* Paragraph styles */
+p {
+  font-size: 16px; /* Reduced paragraph font size */
+  color: #000000;
+  font-weight: 200;
+  line-height: 1.4em; /* Reduced line height */
+  letter-spacing: 0.1em;
+  margin-bottom: 10px; /* Reduced spacing under paragraphs */
+}
+
+/* Box styles for Scan & Buy, Call Option, etc. */
+.box {
+  padding: 15px; /* Reduced padding inside the boxes */
+  background-color: white;
+  box-shadow: 4px 4px 4px 4px #9c919140; /* Slightly reduced shadow size */
+  border-radius: 8px; /* Reduced border-radius */
+}
+.my-lg-15 {
+  padding: 7vh 0;
+}
+.min-h-0 {
+  min-height: 150px !important;
+}
+#header {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  top: 0;
+}
+.scrolled {
+  background-color: #fff !important; /* Any color you want */
+}
+.scroll-hidden {
+  top: -100px !important; /* Hides the header by moving it up */
+}
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.z-100 {
+  z-index: 100;
+}
+.logo img {
+  width: 90px;
+  height: auto;
+  margin-left: 15px;
+}
+
+/* Navbar Link Styling */
+.navbar-light .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #003f62 !important; /* Text color */
+  font-family: "Poppins", sans-serif; /* Font family */
+  font-size: 22px; /* Font size */
+  font-weight: 500; /* Font weight as specified */
+  line-height: 60px; /* Line height */
+  letter-spacing: 2px; /* Letter spacing */
+  text-align: left; /* Text alignment */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-light .nav-link.active {
+  /* Active link color */
+  text-decoration: underline; /* Underline active link */
+  text-underline-offset: 15px;
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.navbar-light .nav-link:hover {
+  text-underline-offset: 15px;
+  text-decoration: underline; /* Underline on hover */
+}
+.dropdown-item:active {
+  color: #000000 !important;
+  background-color: transparent !important;
+  text-underline-offset: 15px;
+  text-decoration: underline; /* Underline on hover */
+}
+.bg-white {
+  background-color: #fff;
+}

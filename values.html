@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Values</title>
+    <link rel="stylesheet" href="css/company32.css" />
+  </head>
+  <body class="values">
+    <div class="container">
+      <!-- Row 1: Heading -->
+      <div class="row heading-row">
+        <h1 class="heading">VALUES</h1>
+      </div>
+
+      <!-- Row 2: Top Image -->
+      <div class="row top-image-row">
+        <div class="top-image-wrapper">
+          <div class="value-circle" id="top" data-value="trust">
+            <img src="images/trust.png" alt="Trust" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Row 3: Circle + Details Section -->
+      <div class="row content-row">
+        <!-- Column 1: Left Side (2 images stacked vertically) -->
+        <div class="column col-left">
+          <div class="value-circle" data-value="innovation">
+            <img src="images/innovation.png" alt="Innovation" />
+          </div>
+          <div class="value-circle" data-value="integrity">
+            <img src="images/integrity.png" alt="Integrity" />
+          </div>
+        </div>
+
+        <!-- Column 2: Value Title and Details -->
+        <div class="column col-center">
+          <div class="value-details">
+            <h2 id="value-title">Trust</h2>
+            <p id="value-paragraph">
+              We prioritize the health and safety of our customers above all
+              else. No matter the potential revenue or profit, we will never
+              sell products that contain cancer-causing substances, illegal, or
+              harmful. Ensuring our customers' well-being is our fundamental
+              commitment and an essential pillar of our company.
+            </p>
+          </div>
+        </div>
+
+        <!-- Column 3: Right Side (2 images stacked vertically) -->
+        <div class="column col-right">
+          <div class="value-circle" data-value="customer-first">
+            <img src="images/customer-first.png" alt="Customer First" />
+          </div>
+          <div class="value-circle" data-value="empowerment">
+            <img src="images/empowerment.png" alt="Empowerment" />
+          </div>
+        </div>
+      </div>
+      <!-- Dots for Swipe Navigation -->
+      <div class="dots-container">
+        <span class="dot active-dot" onclick="moveToSlide(0)"></span>
+        <span class="dot" onclick="moveToSlide(1)"></span>
+        <span class="dot" onclick="moveToSlide(2)"></span>
+        <span class="dot" onclick="moveToSlide(3)"></span>
+        <span class="dot" onclick="moveToSlide(4)"></span>
+      </div>
+    </div>
+
+    <script>
+      let lastScrollPosition = 0; // Tracks the last scroll position
+      const header = document.getElementById("header");
+      const scrollThreshold = 5; // Adjust this value to control the scroll threshold
+
+      window.addEventListener("scroll", () => {
+        let currentScrollPosition = window.scrollY;
+
+        // If scrolling down, hide the header
+        if (currentScrollPosition > lastScrollPosition + scrollThreshold) {
+          header.classList.add("scroll-hidden"); // Hide header
+        } else if (
+          currentScrollPosition <
+          lastScrollPosition - scrollThreshold
+        ) {
+          // If scrolling up and crossed the threshold, show the header
+          header.classList.remove("scroll-hidden"); // Show header
+        }
+
+        // Update the last scroll position
+        lastScrollPosition = currentScrollPosition;
+      });
+
+      // Add an event listener to the window for the scroll event
+      window.addEventListener("scroll", () => {
+        // Check the scroll position
+        if (window.scrollY > 50) {
+          // Change value as per your preference
+          header.classList.add("scrolled"); // Add the 'scrolled' class
+        } else {
+          header.classList.remove("scrolled"); // Remove the 'scrolled' class
+        }
+      });
+
+      const values = {
+        trust: {
+          title: "Trust",
+          text: "We prioritize the health and safety of our customers above all else. No matter the potential revenue or profit, we will never sell products that contain cancer-causing substances, illegal, or harmful. Ensuring our customers' well-being is our fundamental commitment and an essential pillar of our company.",
+        },
+        innovation: {
+          title: "Innovation",
+          text: "We are dedicated to providing cutting-edge technology to enhance our service. Our platform is designed to be user-friendly for everyone, from laymen to a tech-savvy user.",
+        },
+        integrity: {
+          title: "Integrity",
+          text: "We are committed to honesty and transparency in all our dealings. We will never deceive our consumers and will always ensure fair practices.",
+        },
+        "customer-first": {
+          title: "Customer-First",
+          text: "Our customers are at the heart of everything we do. We are committed to understanding and meeting their needs.",
+        },
+        empowerment: {
+          title: "Empowerment",
+          text: "Focuses on empowering everyone in the ecosystem to grow and develop, fostering productivity and self-growth.",
+        },
+      };
+
+      const topImage = document.getElementById("top");
+      const circles = document.querySelectorAll(".value-circle");
+
+      // Function to swap positions between the clicked circle and the top circle
+      function swapPositions(clickedCircle) {
+        const topCircle = document.getElementById("top");
+
+        // Swap the data attributes (values)
+        const topValue = topCircle.getAttribute("data-value");
+        const clickedValue = clickedCircle.getAttribute("data-value");
+
+        topCircle.setAttribute("data-value", clickedValue);
+        clickedCircle.setAttribute("data-value", topValue);
+
+        // Swap the images
+        const topImgSrc = topCircle.querySelector("img").src;
+        const clickedImgSrc = clickedCircle.querySelector("img").src;
+
+        topCircle.querySelector("img").src = clickedImgSrc;
+        clickedCircle.querySelector("img").src = topImgSrc;
+
+        // Update the text based on the new top image
+        updateText(clickedValue);
+      }
+
+      // Function to update text when the top image is changed
+      function updateText(valueKey) {
+        const value = values[valueKey];
+        const valueTitle = document.getElementById("value-title");
+        const valueParagraph = document.getElementById("value-paragraph");
+
+        valueTitle.textContent = value.title;
+        valueParagraph.textContent = value.text;
+      }
+
+      // Add click event listeners to each circle except the top one
+      circles.forEach((circle) => {
+        circle.addEventListener("click", function () {
+          // Check if the clicked circle is not the top one
+          if (!this.id.includes("top")) {
+            swapPositions(this);
+          }
+        });
+      });
+
+      const valueKeys = [
+        "trust",
+        "innovation",
+        "integrity",
+        "customer-first",
+        "empowerment",
+      ];
+      let currentIndex = 0;
+
+      function updateContent(index) {
+        const valueKey = valueKeys[index];
+        const value = values[valueKey];
+
+        document
+          .getElementById("top")
+          .querySelector("img").src = `images/${valueKey}.png`;
+        document.getElementById("value-title").textContent = value.title;
+        document.getElementById("value-paragraph").textContent = value.text;
+
+        updateDots(index);
+      }
+
+      function updateDots(index) {
+        const dots = document.querySelectorAll(".dot");
+        dots.forEach((dot) => dot.classList.remove("active-dot"));
+        dots[index].classList.add("active-dot");
+      }
+
+      function moveToSlide(index) {
+        currentIndex = index;
+        updateContent(currentIndex);
+      }
+
+      // Swipe functionality
+      let touchStartX = 0;
+      let touchEndX = 0;
+
+      function handleSwipe() {
+        if (touchEndX < touchStartX) {
+          currentIndex = (currentIndex + 1) % valueKeys.length;
+        } else if (touchEndX > touchStartX) {
+          currentIndex =
+            (currentIndex - 1 + valueKeys.length) % valueKeys.length;
+        }
+        updateContent(currentIndex);
+      }
+
+      document
+        .querySelector(".top-image-row")
+        .addEventListener("touchstart", (e) => {
+          touchStartX = e.changedTouches[0].screenX;
+        });
+
+      document
+        .querySelector(".top-image-row")
+        .addEventListener("touchend", (e) => {
+          touchEndX = e.changedTouches[0].screenX;
+          handleSwipe();
+        });
+      $(document).ready(function () {
+        $(".navbar-toggler").on("click", function () {
+          if ($(this).hasClass("collapsed")) {
+            // Navbar is collapsed (closed), allow scrolling
+            $("body").css("overflow", "auto");
+          } else {
+            // Navbar is expanded (open), disable scrolling
+            $("body").css("overflow", "hidden");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

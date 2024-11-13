@@ -1,0 +1,979 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  background-color: #f0f8ff;
+  overflow-x: hidden;
+}
+
+/* Navbar Styling */
+#header {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  top: 0;
+}
+.scrolled {
+  background-color: #fff !important; /* Any color you want */
+}
+.scroll-hidden {
+  top: -100px !important; /* Hides the header by moving it up */
+}
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.z-100 {
+  z-index: 100;
+}
+/* .logo {
+  position: relative;
+  width: 130px;
+} */
+.logo img {
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  /* width: 130px; */
+  width: 90px;
+  height: auto;
+  margin-left: 15px;
+}
+
+/* Navbar Link Styling */
+.navbar-light .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #003f62 !important; /* Text color */
+  font-family: "Poppins", sans-serif; /* Font family */
+  font-size: 22px; /* Font size */
+  font-weight: 500; /* Font weight as specified */
+  line-height: 60px; /* Line height */
+  letter-spacing: 2px; /* Letter spacing */
+  text-align: left; /* Text alignment */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-light .nav-link.active {
+  /* Active link color */
+  text-decoration: underline; /* Underline active link */
+  text-underline-offset: 15px;
+}
+
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+.dropdown-item:active {
+  color: #000000 !important;
+  background-color: transparent !important;
+  text-underline-offset: 15px;
+  text-decoration: underline; /* Underline on hover */
+}
+.navbar-light .nav-link:hover {
+  text-underline-offset: 15px;
+  text-decoration: underline; /* Underline on hover */
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+.hero-content {
+  position: relative;
+  z-index: 10;
+  max-width: 85%;
+  text-align: left;
+  color: #003f62;
+}
+
+.hero-content h1 {
+  font-family: "Clash Display Variable", sans-serif;
+  font-size: 69px;
+  font-weight: 700;
+  line-height: 100px;
+  letter-spacing: 4px;
+  text-align: left;
+
+  background: linear-gradient(90deg, #003f62 -32.46%, #7785cc 79.7%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Makes the text color transparent so gradient shows */
+}
+
+.promotionalDescription {
+  font-family: "Clash Display", sans-serif; /* Ensure you have the font included */
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 85px;
+  letter-spacing: 3px;
+  text-align: left;
+  color: #003f62; /* Optional: Set the text color */
+}
+
+/* Specific styling for the 'Delivered in minutes' part */
+.promotionalDescription span {
+  font-family: "Clash Display", sans-serif;
+  font-size: 35px;
+  font-weight: 500;
+  line-height: 55px;
+  letter-spacing: 3px;
+  text-align: left;
+  color: #7785cc;
+}
+
+.AppTitle {
+  width: 400px; /* Exact width */
+  height: 50px; /* Exact height */
+  position: absolute; /* Allowing for specific top/left positioning */
+  bottom: 75px;
+  right: 0;
+  gap: 0px; /* No gap (if part of a flex or grid layout) */
+  opacity: 0px; /* Initially hidden (if needed for some transition) */
+
+  /* Typography */
+  font-family: "Poppins", sans-serif; /* Font family */
+  font-size: 23px; /* Font size */
+  font-weight: 200; /* Font weight */
+  line-height: 70px; /* Line height */
+  letter-spacing: 2px; /* Letter spacing */
+  text-align: left; /* Text alignment */
+
+  /* Background color */
+  color: #0d6b0a; /* Green background */
+  background-color: white; /* Text color (white for contrast) */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero-content h1 {
+    font-size: 50px;
+  }
+
+  .hero-content p {
+    font-size: 30px;
+  }
+
+  .hero-content {
+    max-width: 60%;
+  }
+}
+
+@media (max-width: 992px) {
+  .hero-image {
+    width: 100%;
+    height: auto;
+  }
+
+  #header {
+    background-color: #fff !important;
+  }
+  .bottom-section {
+    flex-direction: column-reverse;
+  }
+  .savings-section {
+    width: 100% !important;
+  }
+  .image-section {
+    width: 100% !important;
+  }
+  .girl-image {
+    width: 40px !important;
+    margin-right: 10px !important;
+  }
+}
+@media (max-width: 768px) {
+  .h-100vh-sm {
+    height: 100vh;
+  }
+  .navbar-light .nav-link {
+    line-height: 40px; /* Line height */
+  }
+  .hero-content {
+    text-align: center;
+    max-width: 80%;
+    padding-left: 0;
+  }
+  .promotionalDescription {
+    font-family: "Clash Display", sans-serif; /* Ensure you have the font included */
+    font-size: 65px;
+    font-weight: 700;
+    line-height: 35px;
+    letter-spacing: 3px;
+    text-align: left;
+    color: #003f62; /* Optional: Set the text color */
+  }
+  .AppTitle {
+    width: fit-content;
+    bottom: 10%;
+  }
+  .hero-content h1 {
+    font-size: 45px;
+    line-height: 50px;
+  }
+
+  .hero-content p {
+    font-size: 28px;
+  }
+
+  .hero {
+    justify-content: center;
+  }
+  .title {
+    font-size: 30px !important;
+    line-height: 32px !important;
+  }
+  .description {
+    line-height: normal !important;
+  }
+  .slide {
+    font-size: 1.2rem;
+  }
+}
+
+.container {
+  /* max-width: 1200px; */
+  margin: 0 auto;
+  padding: 10px;
+  position: relative;
+}
+
+.top-section {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 5px;
+}
+
+.girl-image {
+  width: 80px;
+  height: auto;
+  margin-right: 20px;
+}
+
+.text-section {
+  flex-grow: 1;
+}
+
+.heading {
+  color: #000000;
+  font-family: "Crimson Text", serif;
+  font-size: 35px;
+  font-weight: 600;
+  line-height: 50px;
+  letter-spacing: -0.25px;
+  text-align: left;
+}
+
+.subheading {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 30px;
+  text-align: left;
+}
+
+.bottom-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.savings-section {
+  width: 50%;
+}
+
+.you-saved {
+  color: #003f62;
+  font-family: "Clash Display", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 3px;
+  text-align: left;
+}
+
+.saved-amount {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 34px;
+  text-align: left;
+}
+
+.estimate-text {
+  color: #000000;
+  font-family: "Montserrat", sans-serif;
+  font-size: 25px;
+  font-weight: 300;
+  line-height: 30px;
+  letter-spacing: -0.25px;
+  text-align: left;
+}
+.range-slider {
+  position: relative;
+  width: 80vmin;
+  height: 20vmin;
+}
+
+.range-slider_input {
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  z-index: 3;
+  transform: translateY(-50%);
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  opacity: 0;
+  margin: 0;
+}
+
+.range-slider_input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100px;
+  height: 100px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.range-slider_input::-moz-range-thumb {
+  width: 14vmin;
+  height: 14vmin;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.range-slider_thumb {
+  width: 14vmin;
+  height: 14vmin;
+  border: 0.6vmin solid #303030;
+  border-radius: 50%;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 4vmin;
+  color: #303030;
+  z-index: 2;
+}
+
+.range-slider_line {
+  height: 0.5vmin;
+  width: 100%;
+  background-color: #e1e1e1;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.range-slider_line-fill {
+  position: absolute;
+  height: 0.5vmin;
+  width: 0;
+  background-color: #303030;
+}
+
+.slider-container {
+  margin-top: 15px;
+}
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #04aa6d;
+  cursor: pointer;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04aa6d; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
+.slider {
+  width: 100%;
+  margin: 15px 0;
+}
+
+.month-text {
+  color: #003f62;
+  font-family: "Montserrat", sans-serif;
+  font-size: 15px;
+  font-weight: 200;
+}
+
+.image-section {
+  width: 40%;
+}
+
+.man-image {
+  width: 100%;
+  height: auto;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 8px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 35px;
+  height: 35px;
+  background: #003f62;
+  border: solid 10px #ffffff7d;
+  cursor: pointer;
+  border-radius: 100%;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #003f62;
+  cursor: pointer;
+}
+
+.new-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.title {
+  color: #003f62;
+  font-family: "Clash Display", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: left;
+}
+
+.description {
+  color: #030303;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.operation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.suppliers,
+.customers {
+  flex-basis: 25%;
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .suppliers,
+  .customers {
+    flex-basis: 40%;
+    width: 100%;
+    text-align: center;
+  }
+}
+.sm-mobile {
+  flex-basis: 10%;
+  text-align: center;
+  position: relative;
+  height: 50px;
+}
+
+.app {
+  flex-basis: 10%;
+  text-align: center;
+  z-index: 100;
+}
+
+.operation-img {
+  width: 100%;
+  max-width: 230px;
+  aspect-ratio: 1;
+}
+.operation-img2 {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+  object-fit: contain;
+}
+.operation-img2-sm {
+  width: 200%;
+  max-width: 350px;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+}
+.operation-img3-sm {
+  width: 200%;
+  max-width: 350px;
+  position: absolute;
+  bottom: 0;
+  right: -14%;
+}
+
+.line {
+  flex-basis: 5%;
+  width: 100%;
+  max-width: fit-content;
+}
+
+.operation-section h2 {
+  color: #7f3dff;
+  font-family: "poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Adjusted operation text */
+.operation-text {
+  position: relative;
+  color: #030303;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+  margin-top: 10px;
+  /* width: 100%; */
+}
+
+ul {
+  padding: 0;
+  list-style-type: none;
+}
+.carousel_container {
+  position: relative;
+  margin-left: auto;
+  margin-top: auto;
+  margin-right: auto;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel_items {
+  position: relative;
+  cursor: default !important;
+}
+
+.carousel_item {
+  float: left;
+  border: 0px solid #cc0000;
+}
+
+.item_arrows {
+  position: absolute;
+  top: 200px;
+  width: 100%;
+  height: 1px;
+  z-index: 5000;
+  border: 0px solid green;
+}
+
+.item_arrow {
+  position: absolute;
+  width: 45px;
+  height: 65px;
+  /*
+  background-color: #2d96cd;
+	*/
+  margin-bottom: 1px;
+  float: left;
+}
+
+.nav_dot:hover,
+.item_arrow:hover {
+  cursor: pointer;
+}
+
+.item_next {
+  left: 900px;
+  top: 0px;
+  background-color: #2d96cd;
+}
+
+.item_prev {
+  display: none;
+  left: 900px;
+  top: 66px;
+  background-color: #000;
+}
+
+.fa {
+  color: #fff;
+  font-size: 3em;
+  margin-left: 14px;
+  margin-top: 10px;
+}
+
+.nav_dots {
+  position: relative;
+  bottom: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 50001;
+  border: 1px solid #cc0000;
+}
+
+.nav_dot {
+  width: 6px;
+  height: 6px;
+  float: left;
+  border: 1px solid #fff;
+  background-color: #fff;
+  margin-left: 15px;
+  border-radius: 50%;
+}
+
+.grab {
+  cursor: -webkit-grab;
+  cursor: -moz-grab;
+}
+
+.grabbing {
+  cursor: -webkit-grabbing;
+  cursor: -moz-grabbing;
+}
+
+.w-90vw {
+  width: 90vw !important;
+}
+.dotted-line {
+  border: 1px dashed #000;
+}
+.slider-sm {
+  overflow: hidden;
+}
+.h-100vh {
+  height: 100vh;
+}
+/* General Styles */
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+}
+
+.container {
+  width: 75%;
+  margin: 0 auto;
+  padding: 200px;
+  padding-top: 25px;
+  max-width: 1600px;
+}
+
+h1 {
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-size: 80px;
+  font-weight: 400;
+  line-height: 80px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 5px; /* Adds space between dots for neatness */
+}
+
+th,
+td {
+  text-align: center;
+  padding: 10px 15px;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 80px;
+  letter-spacing: 0.1em;
+}
+
+/* Add dotted border between columns */
+
+tr:not(:last-child).border-b {
+  border-bottom: 2px dotted #7e7e7e; /* Adjusted for a neater dotted line */
+}
+
+/* Removed row dotted borders */
+th {
+  border-bottom: none;
+}
+
+td {
+  border-bottom: none;
+}
+
+/* Subheading Styling for first column */
+td:first-child {
+  font-family: "Poppins", sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+  color: black;
+  line-height: 40px;
+  padding: 18px 0;
+}
+.border-b td:first-child {
+  padding-top: 0;
+  padding-bottom: 18px;
+}
+
+/* Sub-notes style */
+.sub-note {
+  font-family: Montserrat, sans-serif;
+  font-size: 15px;
+  color: #6a6a6a;
+  font-weight: 200;
+  line-height: 18px;
+  text-align: left;
+  margin-top: -30px;
+  padding-left: 5px;
+  padding-top: 20px;
+}
+
+/* Adjust width for table columns */
+table th,
+table td {
+  width: 16.5%;
+}
+
+/* Ensure the dotted line does not exceed logo image */
+thead img {
+  max-width: 150px;
+  margin-bottom: 10px; /* Add space after the image */
+}
+
+.check {
+  color: #44cc4b;
+}
+
+.cross {
+  color: red;
+}
+
+/* RESPONSIVE STYLES FOR MOBILE DEVICES */
+@media (max-width: 992px) {
+  /* Adjust the container padding for mobile */
+  .container {
+    padding: 20px;
+  }
+  .mt-100 {
+    margin-top: 100px;
+  }
+  /* Adjust heading size for mobile */
+  h1 {
+    font-size: 60px;
+    line-height: 80px;
+  }
+
+  /* Adjust table text size for mobile */
+  th,
+  td {
+    font-size: 24px;
+    line-height: 40px;
+    padding: 8px 10px;
+  }
+  td:first-child {
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    font-weight: 200;
+    color: #6a6a6a;
+    line-height: 30px;
+    padding: 15px 0;
+  }
+
+  /* Sub-notes style */
+  .sub-note {
+    font-family: Montserrat, sans-serif;
+    font-size: 10px;
+    color: #6a6a6a;
+    font-weight: 100;
+    line-height: 12px;
+    text-align: left;
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-top: 5px;
+  }
+
+  /* Adjust the column width for mobile */
+  table th,
+  table td {
+    width: auto; /* Allow columns to adjust automatically */
+  }
+
+  /* Adjust the logo size for mobile */
+  thead img {
+    max-width: 72px; /* Make logo smaller for mobile */
+    margin-bottom: 5px;
+  }
+
+  /* Hide borders on mobile to avoid overflow issues */
+  tr:not(:last-child).border-b {
+    border-bottom: 1px dotted #7e7e7e;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Further adjustment for very small screens */
+  h1 {
+    width: 500px;
+    font-size: 40px;
+    line-height: 20px;
+  }
+
+  th,
+  td {
+    font-size: 20px;
+    line-height: 30px;
+    padding: 5px;
+  }
+
+  td:first-child {
+    font-family: "Poppins", sans-serif;
+    font-size: 13px;
+    font-weight: 30;
+    color: #6a6a6a;
+    line-height: 16px;
+    padding: 10px 0;
+  }
+  .border-b td:first-child {
+    padding-top: 0;
+    padding-bottom: 10px;
+  }
+
+  /* Sub-notes style */
+  .sub-note {
+    font-family: Montserrat, sans-serif;
+    font-size: 5px;
+    color: #6a6a6a;
+    font-weight: 10;
+    line-height: 8px;
+    text-align: left;
+    margin-top: 0px;
+    padding-left: 5px;
+  }
+
+  thead img {
+    max-width: 45px; /* Further reduce logo size for very small screens */
+  }
+}
+.bg-white {
+  background-color: #fff;
+}
+
+.animated-img {
+  position: absolute;
+  bottom: 0; /* Adjust this value to position the image above the text */
+  width: 8vw; /* Set the width of the small image */
+  height: auto;
+  animation: moveLeftToRight 5s linear infinite; /* Animate the image */
+}
+
+@keyframes moveLeftToRight {
+  0% {
+    left: 0; /* Start on the left side */
+  }
+  100% {
+    left: 70%; /* Move to the right side */
+  }
+}
+@media (min-width: 1300px) {
+  .col-2xl-5 {
+    -ms-flex: 0 0 41.666667% !important;
+    flex: 0 0 41.666667% !important;
+    max-width: 41.666667% !important;
+  }
+}
+@media (max-width: 1630px) {
+  .hero-content h1 {
+    font-size: 45px;
+  }
+  .promotionalDescription {
+    font-size: 44px;
+  }
+}
+.col-custom-1 {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 25%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+.col-custom-2 {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 35%;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}

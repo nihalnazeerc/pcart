@@ -1,0 +1,91 @@
+/* styles.css */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+  /* background-color: #f4f4f4; */
+}
+
+.new-container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 50px 0;
+}
+
+.title {
+  color: #003f62;
+  font-family: "Clash Display", sans-serif;
+  font-size: 60px;
+  font-weight: 500;
+  line-height: 70px;
+  text-align: left;
+}
+
+.description {
+  color: #030303;
+  font-family: "Montserrat", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 40px;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+.operation-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 20px;
+  width: 100%;
+  margin-top: 100px;
+}
+
+.suppliers,
+.customers {
+  flex-basis: 25%;
+  text-align: center;
+}
+
+.app {
+  flex-basis: 10%;
+  text-align: center;
+}
+
+.operation-img {
+  width: 100%;
+  max-width: 230px;
+  aspect-ratio: 1;
+}
+.operation-img2 {
+  width: 100%;
+  max-width: 350px;
+  height: 300px;
+}
+
+.line {
+  flex-basis: 5%;
+  width: 100%;
+  max-width: fit-content;
+}
+
+.operation-section h2 {
+  color: #7f3dff;
+  font-family: "poppins", sans-serif;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Adjusted operation text */
+.operation-text {
+  color: #030303;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: left;
+  margin-top: 10px;
+  flex-basis: 10%;
+}

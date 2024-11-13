@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>User Stories</title>
+    <link rel="icon" href="images/promptcartLogo.svg" type="image/png" />
+    <link rel="stylesheet" href="css/user.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- GSAP (TweenMax) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+    <!-- jQuery (Already included, ensure it's working) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-B3PP3EG2CY"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-B3PP3EG2CY');
+</script>
+  <body>
+    <header id="header" class="position-sticky z-100">
+      <nav class="navbar p-0 navbar-expand-lg navbar-light">
+        <div class="logo d-lg-none">
+          <img
+            src="images/promptcartLogo.svg"
+            alt="PCart Logo"
+            class="navbar-brand"
+          />
+        </div>
+        <button
+          class="navbar-toggler mr-2"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse h-100vh-sm" id="navbarNav">
+          <ul class="navbar-nav ml-auto nav-links align-items-center">
+            <li class="nav-item">
+              <a
+                href="index.html"
+                class="nav-link px-lg-1px-xl-5 mx-xl-3"
+                id="home-link"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="products.html"
+                class="nav-link px-lg-1px-xl-5 mx-xl-3"
+                id="product-link"
+                >Product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="users.html"
+                class="nav-link px-lg-1px-xl-5 mx-xl-3 active"
+                id="stories-link"
+                >User Stories</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle px-lg-1px-xl-5 mx-xxl-3"
+                id="companyDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Company</a
+              >
+              <div class="dropdown-menu" aria-labelledby="companyDropdown">
+                <a class="dropdown-item nav-link" href="about.html">About Us</a>
+                <a class="dropdown-item nav-link" href="teams.html">Team</a>
+                <a class="dropdown-item nav-link" href="contact.html"
+                  >Contact Us</a
+                >
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <div class="logo">
+                <img
+                  src="images/promptcartLogo.svg"
+                  alt="PCart Logo"
+                  class="navbar-brand"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div class="">
+      <div class="first-section container">
+        <h2>User Stories</h2>
+        <p>
+          Do people really need promptcart ? well lets hear from them , 
+          from a lot of user interviews we have conducted here are few responses
+        </p>
+      </div>
+      <div class="position-relative">
+        <div class="name-card-left bg-4">
+          <h2 class="font-weight-bold">Shiraz P.M , Engineer</h2>
+          <h2>Working men</h2>
+        </div>
+        <div class="backgroung-card bg-3"></div>
+        <div class="person-left">
+          <div class="w-100 padding-y">
+            <div class="row w-100 px-0 mx-0 person-content-section">
+              <div class="col-md-10 row px-0 mx-0 gap-bottom">
+                <div
+                  class="col-md-8 position-relative d-flex flex-md-row flex-column align-items-center justify-content-md-end"
+                >
+                  <div class="person-image">
+                    <img src="images/shirazpm.png" alt="" />
+                  </div>
+                  <div
+                    class="motivation progress-section"
+                    data-aos="fade-left"
+                    data-aos-once="true"
+                  >
+                    <h5>motivation <img src="images/arrow2.png" alt="" /></h5>
+                    <div class="task-progress">
+                      <p>Quality</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress1"
+                            max="100"
+                            value="89"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">89%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Clean UI</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress2"
+                            max="100"
+                            value="79"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">79%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>promptness</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress3"
+                            max="100"
+                            value="70"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">70%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Accurate rate</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress4"
+                            max="100"
+                            value="99"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">99%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4 point-card bg-2">
+                  <h5>Pain Points <img src="images/smile.png" alt="" /></h5>
+                  <ul>
+                    <li>Product Quality issues</li>
+                    <li>Time Consuming user experience</li>
+                    <li>Error loading new deals</li>
+                    <li>Complicated user Interface</li>
+                  </ul>
+
+                </div>
+                <div
+                  class="col-md-1 d-flex align-items-center rotate-90 justify-content-center"
+                >
+                  <img src="images/arrow1.png" alt="" />
+                </div>
+                <div class="col-md-4 point-card bg-1">
+                  <h5><img src="images/rocket.png" alt="" />Goals</h5>
+                  <ul>
+                    <li>Good Quality for Great Deals</li>
+                    <li>Products as shown in the picture</li>
+                    <li>Good user experience including clean and visible UI</li>
+                    <li>Wide Option under one roof</li>
+                    <li>Accuracy and Efficiency more Priority</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="quote-second">
+          <h1>
+            <img src="images/quote.png" alt="" /> Hope PCart app will effectively resolve my concerns regarding grocery delivery, 
+          <!-- </h1>
+        </div>
+        <div class="quote-second">
+          <h1> -->
+            addressing both price and delivery time issues
+            <img src="images/quote-close.png" alt="" />
+          </h1>
+        </div>
+      </div>
+      <div class="position-relative">
+        <div class="name-card-right bg-5">
+          <h2 class="font-weight-bold">Triveni</h2>
+          <h2>Home Maker</h2>
+        </div>
+        <div class="backgroung-card-left bg-6"></div>
+        <div class="person-right">
+          <div class="w-100 padding-y">
+            <div class="row w-100 px-0 mx-0 person-content-section">
+              <div class="col-md-10 row px-0 mx-0 gap-bottom">
+                <div
+                  class="p-top-sm col-md-8 position-relative d-flex flex-md-row flex-column align-items-center justify-content-md-end"
+                >
+                  <div class="person-image">
+                    <img src="images/triveni.png" alt="" />
+                  </div>
+                  <div
+                    class="motivation progress-section"
+                    data-aos="fade-left"
+                    data-aos-once="true"
+                  >
+                    <h5>motivation <img src="images/arrow2.png" alt="" /></h5>
+                    <div class="task-progress">
+                      <p>Quality</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress1"
+                            max="100"
+                            value="89"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">89%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Clean UI</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress2"
+                            max="100"
+                            value="79"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">79%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>promptness</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress3"
+                            max="100"
+                            value="70"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">70%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Accurate rate</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress4"
+                            max="100"
+                            value="99"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">99%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4 point-card bg-7">
+                  <h5>Pain Points <img src="images/smile.png" alt="" /></h5>
+                  <ul>
+                    <li>Product Quality issues</li>
+                    <li>Time Consuming user experience</li>
+                    <li>Delayed Delivery.</li>
+                    <li>Complicated user Interface</li>
+                    <li>Manual Search for coupon codes.</li>
+                  </ul>
+                </div>
+                <div
+                  class="col-md-1 d-flex align-items-center rotate-90 justify-content-center"
+                >
+                  <img src="images/arrow1.png" alt="" />
+                </div>
+                <div class="col-md-4 point-card bg-8">
+                  <h5><img src="images/rocket.png" alt="" />Goals</h5>
+                  <ul>
+                    <li>Easy process ie Login/Checkout.</li>
+                    <li>Accurate results for product search.</li>
+                    <li>Good user experience including clean and visible UI.</li>
+                    <li>Availability of Native Language.</li>
+                    <li>Convenient App Megabytes Size.</li>
+                    <li>Delivery of even a single item.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="quote-second">
+          <h1>
+            <img src="images/quote.png" alt="" />I can use pcart app easier because it support my native language, also I love how PCart app offers chat & call option to place order making grocery shopping 
+          <!-- </h1>
+        </div>
+        <div class="quote-second">
+          <h1> -->
+            much more convenient
+            <img src="images/quote-close.png" alt="" />
+          </h1>
+        </div>
+      </div>
+      <div class="position-relative">
+        <div class="name-card-left bg-4">
+          <h2 class="font-weight-bold">Fidha Sherin , Audiologist</h2>
+          <h2>Working Women</h2>
+        </div>
+        <div class="backgroung-card bg-3"></div>
+        <div class="person-left">
+          <div class="w-100 padding-y">
+            <div class="row w-100 px-0 mx-0 person-content-section">
+              <div class="col-md-10 row px-0 mx-0 gap-bottom">
+                <div
+                  class="col-md-8 position-relative d-flex flex-md-row flex-column align-items-center justify-content-md-end"
+                >
+                  <div class="person-image">
+                    <img src="images/fidha.png" alt="" />
+                  </div>
+                  <div
+                    class="motivation progress-section"
+                    data-aos="fade-left"
+                    data-aos-once="true"
+                  >
+                    <h5>motivation <img src="images/arrow2.png" alt="" /></h5>
+                    <div class="task-progress">
+                      <p>Quality</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress1"
+                            max="100"
+                            value="89"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">89%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Clean UI</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress2"
+                            max="100"
+                            value="79"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">79%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>promptness</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress3"
+                            max="100"
+                            value="70"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">70%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Accurate rate</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress4"
+                            max="100"
+                            value="99"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">99%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4 point-card bg-2">
+                  <h5>Pain Points <img src="images/smile.png" alt="" /></h5>
+                  <ul>
+                    <li>Expiry Date accuracy.</li>
+                    <li>Limited Options.</li>
+                    <li>Single Item Delivery .</li>
+                    <li>Cost Effectiveness.</li>
+                  </ul>
+                </div>
+                <div
+                  class="col-md-1 d-flex align-items-center rotate-90 justify-content-center"
+                >
+                  <img src="images/arrow1.png" alt="" />
+                </div>
+                <div class="col-md-4 point-card bg-1">
+                  <h5><img src="images/rocket.png" alt="" />Goals</h5>
+                  <ul>
+                    <li>Good Quality for Great Deals</li>
+                    <li>Availability of goods in accurate market rate.</li>
+                    <li>Availability of People’s Favourite Brands.</li>
+                    <li>Wide Option under one roof.</li>
+                    <li>Prompt Delivery.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="quote-second">
+          <h1>
+            <img src="images/quote.png" alt="" /> PCart app can greatly enhance my grocery delivery experience,
+          <!-- </h1>
+        </div>
+        <div class="quote-second">
+          <h1> -->
+            due to its user-friendly interface and convenient features.”
+            <img src="images/quote-close.png" alt="" />
+          </h1>
+        </div>
+      </div>
+      <div class="position-relative">
+        <div class="name-card-right bg-5">
+          <h2 class="font-weight-bold">Yousuf K.v</h2>
+          <h2>Household Leader</h2>
+        </div>
+        <div class="backgroung-card-left bg-6"></div>
+        <div class="person-right">
+          <div class="w-100 padding-y">
+            <div class="row w-100 px-0 mx-0 person-content-section">
+              <div class="col-md-10 row px-0 mx-0 gap-bottom">
+                <div
+                  class="p-top-sm col-md-8 position-relative d-flex flex-md-row flex-column align-items-center justify-content-md-end"
+                >
+                  <div class="person-image">
+                    <img src="images/yousuf.jpg" alt="" />
+                  </div>
+                  <div
+                    class="motivation progress-section"
+                    data-aos="fade-left"
+                    data-aos-once="true"
+                  >
+                    <h5>motivation <img src="images/arrow2.png" alt="" /></h5>
+                    <div class="task-progress">
+                      <p>Quality</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress1"
+                            max="100"
+                            value="89"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">89%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Clean UI</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress2"
+                            max="100"
+                            value="79"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">79%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>promptness</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress3"
+                            max="100"
+                            value="70"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">70%</span>
+                      </div>
+                    </div>
+                    <div class="task-progress">
+                      <p>Accurate rate</p>
+                      <div
+                        class="d-flex justify-content-between align-items-center"
+                      >
+                        <span class="w-100">
+                          <progress
+                            class="progress progress4"
+                            max="100"
+                            value="99"
+                          ></progress>
+                        </span>
+                        <span class="ml-4">99%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-4 point-card bg-7">
+                  <h5>Pain Points <img src="images/smile.png" alt="" /></h5>
+                  <ul>
+                    <li>Product Quality issues</li>
+                    <li>Damaged Fruits & Vegitables.</li>
+                    <li>Delayed Delivery.</li>
+                    <li>Cost Effectiveness.</li>
+                  </ul>
+                </div>
+                <div
+                  class="col-md-1 d-flex align-items-center rotate-90 justify-content-center"
+                >
+                  <img src="images/arrow1.png" alt="" />
+                </div>
+                <div class="col-md-4 point-card bg-8">
+                  <h5><img src="images/rocket.png" alt="" />Goals</h5>
+                  <ul>
+                    <li>Assurance in Product Quality</li>
+                    <li>Availability of goods in accurate market rate.</li>
+                    <li>Anti-chemical Products.</li>
+                    <li>Wide Option under one roof.</li>
+                    <li>Prompt Delivery.</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="col-md-2"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="quote-second">
+          <h1>
+            <img src="images/quote.png" alt="" /> Waiting for PCart app as it will really streamline our grocery shopping, 
+          <!-- </h1>
+        </div>
+        <div class="quote-second">
+          <h1> -->
+            helping me manage our budget better and making it easier to find products
+            <img src="images/quote-close.png" alt="" />
+          </h1>
+        </div>
+      </div>
+    </div>
+    <script>
+      let lastScrollPosition = 0; // Tracks the last scroll position
+      const header = document.getElementById("header");
+      const scrollThreshold = 5; // Adjust this value to control the scroll threshold
+
+      window.addEventListener("scroll", () => {
+        let currentScrollPosition = window.scrollY;
+
+        // If scrolling down, hide the header
+        if (currentScrollPosition > lastScrollPosition + scrollThreshold) {
+          header.classList.add("scroll-hidden"); // Hide header
+        } else if (
+          currentScrollPosition <
+          lastScrollPosition - scrollThreshold
+        ) {
+          // If scrolling up and crossed the threshold, show the header
+          header.classList.remove("scroll-hidden"); // Show header
+        }
+
+        // Update the last scroll position
+        lastScrollPosition = currentScrollPosition;
+      });
+
+      // Add an event listener to the window for the scroll event
+      window.addEventListener("scroll", () => {
+        // Check the scroll position
+        if (window.scrollY > 50) {
+          // Change value as per your preference
+          header.classList.add("scrolled"); // Add the 'scrolled' class
+        } else {
+          header.classList.remove("scrolled"); // Remove the 'scrolled' class
+        }
+      });
+      $(document).ready(function () {
+        let firstClick = true;
+        $(".navbar-toggler").on("click", function () {
+          if (firstClick) {
+            // First time we check if it's collapsed or not
+            if ($(this).hasClass("collapsed")) {
+              // Navbar is initially collapsed, allow scrolling
+              $("body").css("overflow", "auto");
+            } else {
+              // Navbar is initially open, disable scrolling
+              $("body").css("overflow", "hidden");
+            }
+
+            firstClick = false; // Disable further checks for 'collapsed'
+          } else {
+            // After first check, simply toggle the CSS between two states
+            if ($("body").css("overflow") === "hidden") {
+              $("body").css("overflow", "auto"); // Re-enable scrolling
+            } else {
+              $("body").css("overflow", "hidden"); // Disable scrolling
+            }
+          }
+        });
+      });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>

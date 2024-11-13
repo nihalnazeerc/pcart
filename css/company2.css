@@ -1,0 +1,231 @@
+/* Global Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: #f4f4f4;
+}
+#header {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  top: 0;
+}
+.scrolled {
+  background-color: #fff !important; /* Any color you want */
+}
+.scroll-hidden {
+  top: -100px !important; /* Hides the header by moving it up */
+}
+header {
+  z-index: 1000;
+}
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.mission-vision .main-title {
+  text-align: start;
+  font-size: 50px; /* Reduced
+  the font size */
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px; /*
+  Reduced bottom margin */
+  max-width: 80%;
+}
+.heading {
+  font-size: 40px;
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+}
+.subheading {
+  font-size: 30px;
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.navbar-light .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #003f62 !important; /* Text color */
+  font-family: "Poppins", sans-serif; /* Font family
+  */
+  font-size: 22px; /* Font size */
+  font-weight: 500; /* Font weight as
+  specified */
+  line-height: 60px; /* Line height */
+  letter-spacing: 2px; /* Letter
+  spacing */
+  text-align: left; /* Text alignment */
+  text-decoration: none; /*
+  Remove underline */
+}
+.z-1-min {
+  z-index: -1;
+}
+.navbar-light .nav-link.active {
+  /* Active link color */
+  text-decoration: underline; /* Underline active link */
+  text-underline-offset: 15px;
+}
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.navbar-light .nav-link:hover {
+  text-underline-offset: 15px;
+  text-decoration: underline; /*
+  Underline on hover */
+}
+.dropdown-item:active {
+  color: #000000 !important;
+  background-color: transparent !important;
+  text-underline-offset: 15px;
+  text-decoration: underline;
+}
+.dropdown-menu {
+  padding: 15px !important;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.col {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.image-col {
+  flex: 0 0 25%; /* Image column takes up 25% of the width */
+}
+
+.text-col {
+  flex: 0 0 75%; /* Text column takes up 75% of the width */
+  display: flex; /* Add flex behavior */
+  flex-direction: column; /* Ensure that content (heading and description) are stacked vertically */
+  padding-left: 20px; /* Add some space between the image and text */
+}
+
+.mission-content,
+.vision-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Heading Styling */
+.heading {
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 57px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+.description {
+  color: #030303;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 23px;
+}
+
+.mission-image,
+.vision-image {
+  width: 160px; /* Increased size */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Hemisphere background styling */
+
+body::before {
+  width: 100vw;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 100% 100%;
+}
+
+body::after {
+  width: 100vw;
+  height: 50vh;
+  top: calc(100vh - 50vh);
+  left: 0; /* Adjusted to make it fit within the screen */
+  border-radius: 100% 100% 0 0; /* Show only the top half of the hemisphere */
+}
+.h-80vh {
+  height: 80vh;
+}
+.EffectImage {
+  bottom: -2%;
+  left: 15%;
+  width: 25vw;
+}
+.EffectImage2 {
+  top: -2%;
+  transform: rotateZ(180deg);
+  right: 15%;
+  width: 15vw;
+}
+@media screen and (max-width: 768px) {
+  .h-80vh {
+    height: auto;
+  }
+  .navbar-light .nav-link {
+    line-height: 40px; /* Line height */
+  }
+  .text-col {
+    flex: 0 0 100%; /* Text column takes up 75% of the width */
+  }
+  .mission-content,
+  .vision-content {
+    gap: 15px;
+  }
+}
+/* @media screen and (max-width: 576px) {
+
+} */

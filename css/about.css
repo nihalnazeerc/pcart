@@ -1,0 +1,833 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  width: 100%;
+  padding: 20px;
+}
+.reImagine {
+  position: relative;
+  overflow: hidden;
+}
+.reImagine .bg-img {
+  position: absolute;
+  right: 0px;
+  bottom: 0px;
+  height: auto;
+  width: 100%;
+  z-index: -1;
+}
+.reImagine .container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-us-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; /* Adds space between the rows */
+}
+
+.first-section h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 100px;
+  letter-spacing: 0.1em;
+  text-align: center; /* Centers the About Us text */
+  animation: fadeInUp 1s ease-in-out; /* Text will appear from the bottom */
+}
+
+/* Content Row (Images and Text) */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.first-section p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px; /* Adjusted to maintain balance with larger images */
+  font-weight: 200;
+  line-height: 35px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards; /* Text fades in from bottom */
+}
+
+/* Larger images */
+.image-bike,
+.image-bucket {
+  width: 100%; /* Increased size for better visibility */
+  height: auto;
+}
+
+/* Bike Animation - Appears from left */
+.image-bike {
+  transform: translateX(-100%); /* Start off-screen from the left */
+  animation: slideInFromLeft 1.5s ease-in-out forwards;
+}
+
+/* Bucket Animation - Appears from right */
+.image-bucket {
+  transform: translateX(100%); /* Start off-screen from the right */
+  animation: slideInFromRight 1.5s ease-in-out forwards;
+}
+
+/* Keyframes for the animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.first-section .container {
+  width: 100%;
+  padding: 20px;
+}
+.first-section {
+  background-color: #09212f;
+  font-family: "Poppins", sans-serif;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-title {
+  text-align: start;
+  font-size: 50px; /* Reduced
+the font size */
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px; /*
+Reduced bottom margin */
+  max-width: 80%;
+}
+.heading {
+  font-size: 40px;
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  line-height: 30px;
+}
+.subheading {
+  font-size: 30px;
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+}
+.navbar-light .nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #003f62 !important; /* Text color */
+  font-family: "Poppins", sans-serif; /* Font family
+*/
+  font-size: 22px; /* Font size */
+  font-weight: 500; /* Font weight as
+specified */
+  line-height: 60px; /* Line height */
+  letter-spacing: 2px; /* Letter
+spacing */
+  text-align: left; /* Text alignment */
+  text-decoration: none; /*
+Remove underline */
+}
+.z-1-min {
+  z-index: -1;
+}
+.navbar-light .nav-link.active {
+  /* Active link color */
+  text-decoration: underline; /* Underline active link */
+  text-underline-offset: 15px;
+}
+.dropdown-menu {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.3s ease;
+  transform: translateY(-10px);
+}
+.dropdown-menu.show {
+  display: block;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.navbar-light .nav-link:hover {
+  text-underline-offset: 15px;
+  text-decoration: underline; /*
+Underline on hover */
+}
+.dropdown-item:active {
+  color: #000000 !important;
+  background-color: transparent !important;
+  text-underline-offset: 15px;
+  text-decoration: underline;
+}
+.content {
+  margin: 40px 0;
+}
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+.col {
+  flex: 1;
+}
+.pink-gradient-text {
+  background: linear-gradient(to right, #ff7eb3, #ff758f);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size: 42px;
+  font-weight: 200;
+  line-height: 30px;
+  height: 47px;
+  letter-spacing: 0.1em;
+}
+.image-col {
+  flex: 0.5;
+  display: flex;
+  justify-content: center;
+}
+.product-image,
+.icon-image {
+  max-width: 90%;
+  height: auto;
+  object-fit: contain;
+}
+p {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 200;
+  line-height: 1.5em;
+  letter-spacing: 0.1em;
+}
+.box {
+  padding: 20px;
+  background-color: white;
+  box-shadow: 6px 6px 6px 6px #9c919140;
+  border-radius: 10px;
+}
+.h-screen {
+  height: 90vh;
+}
+.location-img {
+  width: 140%;
+  position: absolute;
+  right: 0;
+  top: -295px;
+}
+.flip {
+  display: inline-block;
+  position: relative;
+  width: 250px;
+  height: 40px;
+  perspective: 500px;
+}
+.step {
+  font-weight: 600;
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 4px;
+  opacity: 0;
+  transform: rotateX(90deg);
+  transform-origin: top;
+  transition: all 0.5s ease-in-out;
+}
+.set {
+  opacity: 1;
+  transform: rotateX(0deg);
+}
+.down {
+  opacity: 0;
+  transform: rotateX(-90deg);
+}
+@media (max-width: 992px) {
+  header {
+    background-color: #fff;
+  }
+  .first-section {
+    height: auto;
+  }
+  .image-bike,
+  .image-bucket {
+    width: 50%;
+  }
+  .location-img {
+    width: 100%;
+    position: static;
+  }
+  .flip-text-1 {
+    font-size: 25px;
+  }
+  .pink-gradient-text {
+    font-size: 25px;
+    height: 35px;
+    letter-spacing: 0.1em;
+  }
+  .flip {
+    width: 160px;
+  }
+  .h-screen {
+    height: auto;
+  }
+}
+#header {
+  background-color: transparent;
+  transition: background-color 0.3s ease;
+  top: 0;
+}
+.scrolled {
+  background-color: #fff !important; /* Any color you want */
+}
+.scroll-hidden {
+  top: -100px !important; /* Hides the header by moving it up */
+}
+header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 10;
+}
+.z-100 {
+  z-index: 100;
+}
+.logo img {
+  width: 90px;
+  height: auto;
+  margin-left: 15px;
+}
+@media (max-width: 992px) {
+  header {
+    background-color: #fff;
+  }
+  .main-title {
+    font-size: 30px; /* Reduced the font size */
+    letter-spacing: 0.1em;
+  }
+  .main-title {
+    max-width: 100%;
+  }
+  .product-image {
+    transform: translateY(0) !important;
+  }
+  .gap-1 {
+    gap: 15px;
+  }
+  .my-lg-15 {
+    padding: 1vh 0 !important;
+  }
+}
+.dropdown-menu {
+  padding: 15px !important;
+}
+
+.mission-vision {
+  overflow: hidden;
+}
+.row {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 50px;
+}
+
+.col {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.image-col {
+  flex: 0 0 25%; /* Image column takes up 25% of the width */
+}
+
+.text-col {
+  flex: 0 0 75%; /* Text column takes up 75% of the width */
+  display: flex; /* Add flex behavior */
+  flex-direction: column; /* Ensure that content (heading and description) are stacked vertically */
+  padding-left: 20px; /* Add some space between the image and text */
+}
+
+.mission-content,
+.vision-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Heading Styling */
+.heading {
+  color: #003f62;
+  font-family: "Clash Display Variable", sans-serif;
+  font-size: 58px;
+  font-weight: 400;
+  line-height: 57px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+
+/* Paragraph Styling */
+.description {
+  color: #030303;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 23px;
+}
+
+.mission-image,
+.vision-image {
+  width: 160px; /* Increased size */
+  height: auto;
+  margin-right: 20px;
+}
+
+/* Hemisphere background styling */
+
+body::before {
+  width: 100vw;
+  height: 50vh;
+  top: 0;
+  left: 0;
+  border-radius: 0 0 100% 100%;
+}
+
+body::after {
+  width: 100vw;
+  height: 50vh;
+  top: calc(100vh - 50vh);
+  left: 0; /* Adjusted to make it fit within the screen */
+  border-radius: 100% 100% 0 0; /* Show only the top half of the hemisphere */
+}
+.h-90vh {
+  height: 90vh;
+}
+.EffectImage {
+  bottom: -2%;
+  left: 15%;
+  width: 25vw;
+}
+.EffectImage2 {
+  top: -2%;
+  transform: rotateZ(180deg);
+  right: 15%;
+  width: 15vw;
+}
+@media screen and (max-width: 768px) {
+  .navbar-light .nav-link {
+    line-height: 40px; /* Line height */
+  }
+  .h-90vh {
+    height: auto;
+  }
+  .text-col {
+    flex: 0 0 100%; /* Text column takes up 75% of the width */
+  }
+  .mission-content,
+  .vision-content {
+    gap: 15px;
+  }
+}
+.bg-white {
+  background-color: #fff;
+}
+
+/* ------------------------------------- */
+/* Base styles */
+.values {
+  background-color: #09212f;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  overflow-y: auto; /* Allow vertical scrolling if necessary */
+}
+
+.values .container {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Fill height to prevent overflow */
+}
+
+/* Row 1: Heading */
+.heading-row {
+  height: 10%; /* Fixed height for heading */
+  text-align: center;
+}
+
+.values .heading {
+  color: white;
+  font-family: "Clash Display Variable", sans-serif;
+  font-size: 60px;
+  font-weight: 350;
+  margin: 0;
+  padding: 10px 0; /* Reduced padding for more balance */
+}
+
+/* Row 2: Top Image */
+.top-image-row {
+  /* height: 30%;  */
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px; /* Slightly reduced margin */
+}
+
+.top-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 160px;
+  height: 160px;
+}
+
+.value-circle {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  position: relative;
+  animation: revolve 5s infinite linear;
+}
+
+.value-circle img {
+  width: 80%;
+  height: auto;
+}
+
+/* Circular motion for the entire circle */
+@keyframes revolve {
+  0% {
+    transform: rotate(0deg) translateX(10px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(10px) rotate(-360deg);
+  }
+}
+
+/* Row 3: Circle + Text Layout */
+.values .content-row {
+  height: 45%; /* Fixed height for text content */
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 20px;
+}
+
+/* Column 1: Left Side (2 images stacked vertically) */
+.values .col-left,
+.values .col-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 350px;
+  width: 25%;
+}
+
+.values .col-left .value-circle,
+.values .col-right .value-circle {
+  margin: 30px 0;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background-color: white;
+  border-radius: 50%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Column 2: Center Text */
+.values .col-center {
+  width: 50%;
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.value-details {
+  max-width: 600px; /* Increased width */
+  min-width: 500px; /* Set a minimum width to prevent width changes */
+  height: auto; /* Adjust height based on content */
+}
+
+#value-title {
+  color: white;
+  font-size: 30px;
+}
+
+#value-paragraph {
+  color: white;
+  font-size: 18px;
+  line-height: 1.6;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Swipe and Dot Styles */
+.values .dots-container {
+  display: none;
+}
+
+.values .dot {
+  height: 12px;
+  width: 12px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+.values .active-dot {
+  background-color: #fff;
+}
+
+/* Laptop Responsive Adjustments */
+@media (max-width: 1440px) {
+  .values .heading {
+    font-size: 70px;
+  }
+
+  .values .value-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .values #value-title {
+    font-size: 28px;
+  }
+
+  .values #value-paragraph {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .values .heading {
+    font-size: 60px;
+  }
+
+  .values .value-circle {
+    width: 130px;
+    height: 130px;
+  }
+
+  .values #value-title {
+    font-size: 26px;
+  }
+
+  .values #value-paragraph {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .values .heading {
+    font-size: 50px;
+  }
+
+  .values .value-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .values #value-title {
+    font-size: 24px;
+  }
+
+  .values #value-paragraph {
+    font-size: 14px;
+  }
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 768px) {
+  .h-100vh-sm {
+    height: 100vh;
+  }
+  .values .heading {
+    font-size: 35px;
+    margin-top: 0; /* Remove extra margin at the top */
+  }
+
+  .top-image-wrapper {
+    width: 160px;
+    height: 160px;
+  }
+
+  .value-circle {
+    width: 150px;
+    height: 150px;
+  }
+
+  /* Hide columns 1 and 3 on mobile */
+  .values .col-left,
+  .values .col-right {
+    display: none;
+  }
+
+  /* Make column 2 full width */
+  .values .col-center {
+    width: 100%;
+  }
+
+  .values .value-details {
+    max-width: 90%; /* Make sure it takes the majority of the width */
+    min-width: 85%; /* Keep it centered and flexible */
+  }
+
+  .values #value-title {
+    font-size: 22px;
+  }
+
+  .values #value-paragraph {
+    font-size: 13px;
+  }
+
+  /* Dots Adjustment for mobile */
+  .values .dots-container {
+    margin-bottom: 0; /* Remove extra space after dots */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Adjusted margin to reduce extra space */
+  }
+
+  .values .dot {
+    height: 10px;
+    width: 10px;
+  }
+
+  /* Swipe functionality for mobile */
+  .values .top-image-row {
+    touch-action: pan-y;
+  }
+}
+
+@media (max-width: 480px) {
+  /* .top-image-row {
+    height: 40%;
+  } */
+  .values .heading {
+    font-size: 30px;
+    margin-top: 0; /* Remove space at the top */
+  }
+
+  .values .top-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+  .values .value-circle {
+    width: 140px;
+    height: 140px;
+  }
+
+  .values .value-details {
+    max-width: 90%;
+  }
+
+  .values #value-title {
+    font-size: 20px;
+  }
+
+  .values #value-paragraph {
+    font-size: 12px;
+  }
+
+  .values .dots-container {
+    margin-bottom: 5px; /* Reduce space below the dots */
+  }
+}
+
+/* Prevent overflow on smaller screens */
+@media (max-width: 430px) {
+  .values {
+    overflow-x: hidden; /* Hide horizontal overflow */
+  }
+
+  .values .container {
+    width: 100vw; /* Ensure the container takes the full viewport width */
+    padding-bottom: 0; /* Reduce any bottom padding */
+  }
+
+  .values .heading {
+    font-size: 28px;
+  }
+
+  .values .value-details {
+    max-width: 85%;
+  }
+
+  .values .dots-container {
+    margin-bottom: 0;
+  }
+}

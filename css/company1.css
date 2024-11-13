@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #09212f;
+  font-family: "Poppins", sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  padding: 20px;
+}
+
+/* About Us Row */
+.about-us-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 50px; /* Adds space between the rows */
+}
+
+h1 {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 100px;
+  letter-spacing: 0.1em;
+  text-align: center; /* Centers the About Us text */
+  animation: fadeInUp 1s ease-in-out; /* Text will appear from the bottom */
+}
+
+/* Content Row (Images and Text) */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px; /* Space between columns */
+}
+
+.col {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+p {
+  color: white;
+  font-family: "Poppins", sans-serif;
+  font-size: 20px; /* Adjusted to maintain balance with larger images */
+  font-weight: 200;
+  line-height: 35px;
+  letter-spacing: 0.1em;
+  text-align: center;
+  opacity: 0;
+  animation: fadeInUp 1.5s ease-in-out forwards; /* Text fades in from bottom */
+}
+
+/* Larger images */
+.image-bike,
+.image-bucket {
+  width: 300px; /* Increased size for better visibility */
+  height: auto;
+}
+
+/* Bike Animation - Appears from left */
+.image-bike {
+  transform: translateX(-100%); /* Start off-screen from the left */
+  animation: slideInFromLeft 1.5s ease-in-out forwards;
+}
+
+/* Bucket Animation - Appears from right */
+.image-bucket {
+  transform: translateX(100%); /* Start off-screen from the right */
+  animation: slideInFromRight 1.5s ease-in-out forwards;
+}
+
+/* Keyframes for the animations */
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromRight {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}

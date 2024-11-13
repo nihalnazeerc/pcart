@@ -1,0 +1,117 @@
+/* Base styles */
+body {
+    background-color: #09212F;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Row 1: Heading */
+.heading-row {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.heading {
+    color: white;
+    font-family: 'Clash Display Variable', sans-serif;
+    font-size: 80px;
+    font-weight: 450;
+    margin: 0;
+    padding: 20px 0;
+}
+
+/* Row 2: Top Image */
+.top-image-row {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1px;
+}
+
+.top-image-wrapper {
+    position: relative;
+    width: 160px;
+    height: 160px;
+}
+
+.value-circle {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.value-circle img {
+    width: 80%;
+    height: auto;
+}
+
+/* Row 3: Circle + Text Layout */
+.content-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+/* Column 1: Left Side (2 images stacked vertically) */
+.col-left, .col-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 350px;
+}
+
+.col-left .value-circle, .col-right .value-circle {
+    margin: 10px 0;
+}
+
+/* Column 2: Center Text */
+.col-center {
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.value-details {
+    max-width: 600px;
+}
+
+#value-title {
+    color: white;
+    font-size: 30px;
+}
+
+#value-paragraph {
+    color: white;
+    font-size: 18px;
+    line-height: 1.6;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Column 3: Right Side (2 images stacked vertically) */
+.col-right .value-circle {
+    margin: 10px 0;
+}

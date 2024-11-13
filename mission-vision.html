@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mission and Vision</title>
+    <link rel="stylesheet" href="css/company2.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <!-- GSAP (TweenMax) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/Draggable.min.js"></script>
+    <!-- jQuery (Already included, ensure it's working) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+  </head>
+  <body>
+    <header id="header" class="position-sticky z-100">
+      <nav class="navbar p-0 navbar-expand-lg navbar-light" id="header">
+        <div class="logo d-lg-none">
+          <img
+            src="images/logo-new.png"
+            alt="PCart Logo"
+            class="navbar-brand"
+          />
+        </div>
+        <button
+          class="navbar-toggler mr-2"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse h-100vh-sm" id="navbarNav">
+          <ul class="navbar-nav ml-auto nav-links align-items-center">
+            <li class="nav-item">
+              <a
+                href="index.html"
+                class="nav-link px-lg-1px-xl-5 mx-xl-3"
+                id="home-link"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="products.html"
+                class="nav-link px-lg-1px-xl-5 mx-xl-3 active"
+                id="product-link"
+                >Product</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                href="users.html"
+                class="nav-link px-lg-1px-xl-5 mx-xl-3"
+                id="stories-link"
+                >User Stories</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                href="#"
+                class="nav-link dropdown-toggle px-lg-1px-xl-5 mx-xxl-3"
+                id="companyDropdown"
+                role="button"
+                data-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                >Company</a
+              >
+              <div class="dropdown-menu" aria-labelledby="companyDropdown">
+                <a class="dropdown-item nav-link" href="about.html">About Us</a>
+                <a class="dropdown-item nav-link" href="teams.html">Team</a>
+                <a class="dropdown-item nav-link" href="contact.html"
+                  >Contact Us</a
+                >
+              </div>
+            </li>
+            <li class="nav-item d-none d-lg-block">
+              <div class="logo">
+                <img
+                  src="images/logo-new.png"
+                  alt="PCart Logo"
+                  class="navbar-brand"
+                />
+              </div>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <div
+      class="container h-80vh d-flex w-100 align-items-center position-relative"
+    >
+      <img
+        src="images/Effect.png"
+        alt="Mission Image"
+        class="position-absolute EffectImage animate-img"
+      />
+      <img
+        src="images/Effect.png"
+        alt="Mission Image"
+        class="position-absolute EffectImage2 animate-img"
+      />
+      <div class="row">
+        <!-- Our Mission Section -->
+        <div class="col-lg-6 row mission-content">
+          <div class="col-md-4 image-col">
+            <img
+              src="images/Mission.png"
+              alt="Mission Image"
+              class="mission-image animate-img-side"
+            />
+          </div>
+          <div class="col-md-8 text-col animate-text">
+            <h1 class="heading">Our Mission</h1>
+            <p class="description">
+              Revolutionize the grocery shopping experience by emerging as the most dependable and preferred platform, offering a seamless, convenient, and accessible to all the people of Kerala, making their lives easier every day.
+            </p>
+          </div>
+        </div>
+
+        <!-- Our Vision Section -->
+        <div class="row col-lg-6 vision-content">
+          <div class="col-md-4 image-col">
+            <img
+              src="images/vision.png"
+              alt="Vision Image"
+              class="vision-image animate-img-side"
+            />
+          </div>
+          <div class="col-md-8 text-col animate-text">
+            <h1 class="heading">Our Vision</h1>
+            <p class="description">
+              To become the most preferred super app, renowned for solving a
+              multitude of customer concerns and making life easier for millions
+              of users across the globe.
+            </p>
+          </div>
+        </div>
+      </div>
+    /div>
+    <script>
+      let lastScrollPosition = 0; // Tracks the last scroll position
+      const header = document.getElementById("header");
+      const scrollThreshold = 5; // Adjust this value to control the scroll threshold
+
+      window.addEventListener("scroll", () => {
+        let currentScrollPosition = window.scrollY;
+
+        // If scrolling down, hide the header
+        if (currentScrollPosition > lastScrollPosition + scrollThreshold) {
+          header.classList.add("scroll-hidden"); // Hide header
+        } else if (
+          currentScrollPosition <
+          lastScrollPosition - scrollThreshold
+        ) {
+          // If scrolling up and crossed the threshold, show the header
+          header.classList.remove("scroll-hidden"); // Show header
+        }
+
+        // Update the last scroll position
+        lastScrollPosition = currentScrollPosition;
+      });
+
+
+      // Add an event listener to the window for the scroll event
+      window.addEventListener("scroll", () => {
+        // Check the scroll position
+        if (window.scrollY > 50) {
+          // Change value as per your preference
+          header.classList.add("scrolled"); // Add the 'scrolled' class
+        } else {
+          header.classList.remove("scrolled"); // Remove the 'scrolled' class
+        }
+      });
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const flipperElement = document.getElementById("flipper");
+        new Flip(flipperElement);
+
+        // GSAP animation for text and image
+        gsap.from(".animate-text", {
+          duration: 1.5,
+          opacity: 0,
+          y: -50, // Move from top
+          ease: "power2.out",
+        });
+
+        gsap.from(".animate-img", {
+          duration: 1.5,
+          opacity: 0,
+          scale: 0.8, // Start with 80% size
+          ease: "back.out(1.7)",
+        });
+        gsap.from(".animate-img-side", {
+          duration: 1.5,
+          opacity: 0,
+          scale: 0.8, // Start with 80% size
+          ease: "back.out(1.7)",
+        });
+      });
+      $(document).ready(function() {
+    let firstClick = true;
+      $('.navbar-toggler').on('click', function() {
+      if (firstClick) {
+        // First time we check if it's collapsed or not
+        if ($(this).hasClass('collapsed')) {
+          // Navbar is initially collapsed, allow scrolling
+          $('body').css('overflow', 'auto');
+        } else {
+          // Navbar is initially open, disable scrolling
+          $('body').css('overflow', 'hidden');
+        }
+
+        firstClick = false; // Disable further checks for 'collapsed'
+      } else {
+        // After first check, simply toggle the CSS between two states
+        if ($('body').css('overflow') === 'hidden') {
+          $('body').css('overflow', 'auto'); // Re-enable scrolling
+        } else {
+          $('body').css('overflow', 'hidden'); // Disable scrolling
+        }
+      }
+    });
+  });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
